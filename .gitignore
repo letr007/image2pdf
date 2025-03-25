@@ -1,0 +1,7 @@
+.python-version
+img/
+test_image2pdf.py
+pyproject.toml
+uv.lock
+album/
+__pycache__/

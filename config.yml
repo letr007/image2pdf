@@ -2,13 +2,26 @@
 version: '2.0'
 
 dir_rule:
-  base_dir: D:/18comic_down/books
-  rule: Bd_Atitle_Pindex
+  base_dir: ./album
+#   rule: Bd_Atitle_Pindex
 
 client:
-  domain:
-    - 18comic.vip
-    - 18comic.org
+  impl: html
+
+  # domain:
+  #   - 18comic.vip
+  #   - 18comic.org
+  #   - jm-comic.org
+  #   - jm-comic2.cc
+
+  postman:
+    meta_data:
+      # 使用系统代理，默认clash端口
+      proxies: 
+        http: http://127.0.0.1:7890
+        https: http://127.0.0.1:7890
+  #     # 如果需要登录，在这里配置cookies
+  #     cookies: null
 
 download:
   cache: true # 如果要下载的文件在磁盘上已存在，不用再下一遍了吧？
